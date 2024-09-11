@@ -3,7 +3,7 @@ A genetic algorithm for maximizing a bitstring.
 
 The integer is encoded as a bitstring (list of 0s or 1s). Fitness is calculated with either the value of the bitstring
 or the number of 1s in the bitstring (both are included for a comparison). Crossover is a single point crossover and
-mutation is a bit flip mutation.
+mutation is a bit of flip mutation.
 """
 from random import choices, random, randrange
 
@@ -116,10 +116,10 @@ if __name__ == "__main__":
     generation_average_fitness.append(sum(population_fitness) // len(population_fitness))
     # [end-ending]
 
-    # plt.plot(generation_max_fitness, label="Best Fitness")
-    # plt.plot(generation_average_fitness, label="Average Fitness")
-    # plt.title("Fitness Over Time")
-    # plt.xlabel("Generation")
-    # plt.ylabel("Fitness")
-    # plt.legend()
-    # plt.show()
+    plt.plot(generation_max_fitness, label="Best Fitness")
+    plt.plot(generation_average_fitness, label="Average Fitness")
+    plt.title("Fitness Over Time")
+    plt.xlabel("Generation")
+    plt.ylabel("Fitness")
+    plt.legend()
+    plt.show()
